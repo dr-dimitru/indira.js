@@ -1,5 +1,5 @@
 /**
-* Indira.js v1.0 by Dmitriy A. Golev
+* Indira.js v1.01 by Dmitriy A. Golev
 *
 * The MIT License (MIT)
 * 
@@ -241,6 +241,7 @@ function ajaxify(){
 
 			prevent_follow = false;
 
+			$(document).trigger("abortPushState", [false]);
 			$(document).trigger("beforePushState");
 
 			if(!abortPushState){
@@ -252,7 +253,7 @@ function ajaxify(){
 
 			prevent_follow = true;
 
-			$(document).trigger("beforeSendAjax");
+			$(document).trigger("abortPushState", [true]);
 
 			if(!abortSendAjax){
 
@@ -533,6 +534,8 @@ function cache(p, out_el, caching, callback, append, replace){
 
 //SEND AJAX REQUEST
 function send_ajax(obj, load_el, out_el, append, restore, remove, popup_out, callback, replace){
+
+	$(document).trigger("beforeSendAjax");
 
 	if(load_el == false){
 
