@@ -1,5 +1,5 @@
 /**
-* Indira.js v1.01 by Dmitriy A. Golev
+* Indira.js v1.02 by Dmitriy A. Golev
 *
 * The MIT License (MIT)
 * 
@@ -671,9 +671,10 @@ function search_in_cache(id){
 
 	$.each($cached, function(index, value){
 
-		if(value.find('#' + id).length !== 0){
+		if($('#' + id, $cached[index]).length !== 0){
 
-			id = value.find('#' + id);
+			id = $('#' + id, $cached[index]);
+			return false;
 		}
 	});
 

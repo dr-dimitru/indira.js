@@ -1,5 +1,5 @@
 /**
-* DEBUG VERSION OF Indira.js v1.01 by Dmitriy A. Golev
+* DEBUG VERSION OF Indira.js v1.02 by Dmitriy A. Golev
 * All actions is logged into JS-Console 
 *
 * The MIT License (MIT)
@@ -782,10 +782,11 @@ function search_in_cache(id){
 
 	$.each($cached, function(index, value){
 
-		if(value.find('#' + id).length !== 0){
+		if($('#' + id, $cached[index]).length !== 0){
 
 			console.log('search_in_cache() | Element is FOUND in $cached -> returning (object)');
-			id = value.find('#' + id);
+			id = $('#' + id, $cached[index]);
+			return false;
 		}
 	});
 
