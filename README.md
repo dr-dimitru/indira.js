@@ -4,10 +4,12 @@
 #####History API | AJAX | AJAXify | JS Caching | AJAX fileupload | Based on data-attributes
 
 ### Installation:
+
+```
 <script src="http://code.jquery.com/jquery-latest.min.js"
 type="text/javascript"></script>
 
-```
+
 <script type="text/javascript">
 	var indiraJsConfig = {
 		loader: 'Loading...',
