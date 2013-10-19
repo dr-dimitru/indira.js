@@ -3,7 +3,9 @@
 
 
 [Official webpage & Examples](http://indirajs.indira-cms.com/)
+
 [Last stable version](https://github.com/dr-dimitru/indira.js/tree/master)
+
 [Dev version](https://github.com/dr-dimitru/indira.js/tree/dev)
 
 
